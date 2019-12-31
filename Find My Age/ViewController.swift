@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    
     let calendar    = Calendar.current
 
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -29,7 +28,6 @@ class ViewController: UIViewController {
             alertDate()
             return
         }
-        
         let components  = calendar.dateComponents([.year,.month,.day], from: birthDate,to: today)
         
         guard let ageYears  = components.year else {return}
